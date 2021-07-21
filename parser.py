@@ -4,7 +4,7 @@ import openpyxl
 path = 'score.html'
 htmlfile = open(path, 'r', encoding='utf-8')
 htmlhandle = htmlfile.read()
-soup = BeautifulSoup(htmlhandle, 'lxml')
+soup = BeautifulSoup(htmlhandle, 'html.parser')
 tables = soup.find_all('table')
 
 tr_list = tables[1].find_all('tr')
